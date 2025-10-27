@@ -19,7 +19,17 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long authorId;
 
+    @Column(name = "author_name")
     private String authorName;
+
+    @Column(name = "author_img")
+    private String authorImgUrl;
+
+    @Column(name = "author_bio")
+    private String authorBio;
+
+    @Column(name = "author_dob")
+    private String authorDOB;
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books;

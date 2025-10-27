@@ -95,6 +95,8 @@ public class GenreServiceImpl implements GenreService {
 
     @Override
     public GenreDto getGenre(Long genreId) {
-        return null;
+        Genre genreFromDb = genreRepository.findById(genreId).
+                orElseThrow(() -> new ResourceNotFoundException("Genrre", "genreId", genreId));
+        return modelMapper.map(genreFromDb, GenreDto.class);
     }
 }

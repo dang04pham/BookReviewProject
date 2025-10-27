@@ -12,5 +12,8 @@ import java.util.Set;
 public class AuthorDto {
     private Long authorId;
     private String authorName;
+    private String authorImgUrl;
+    private String authorBio;
+    private String authorDOB;
     private Set<Long> bookIds; // List of Book IDs the author is linked to
 }
