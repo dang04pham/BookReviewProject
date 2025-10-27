@@ -21,7 +21,7 @@ public class User {
     private String username;
     private String password;
 
-    @OneToMany(mappedBy = "reviewer")
+    @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 
 

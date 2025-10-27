@@ -16,7 +16,10 @@ public class Review {
     @Column(name = "review_id")
     private Long reviewId;
 
+    @Column(name = "review_content")
     private String reviewContent;
+
+    @Column(name = "review_timestamp")
     private String reviewTimestamp;
 
     @ManyToOne
@@ -26,4 +29,5 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
+
 }
