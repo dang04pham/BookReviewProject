@@ -16,10 +16,11 @@ public class Book {
 
     @Id
     @Column(name = "book_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookId;
 
-    @Column(name = "book_name")
-    private String bookName;
+    @Column(name = "book_title")
+    private String bookTitle;
 
     @Column(name = "book_img")
     private String bookImgUrl;
